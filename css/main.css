@@ -13,319 +13,7 @@ html, body {
 img {
     width: 100%;
 }
-
-/* Welcome Page */
-.welcome
-{
-    background-color: #000a8c;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    display: flex;
-}
-
-body {
-    background-color: #000a8c;
-    font-family: 'ode', sans-serif;
-    overflow-x: hidden;
-}
-
-.hero {
-    height: 100vh;
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-}
-
-.welcome h1{
-    font-family: 'ode', sans-serif;
-    color: #ffebca;
-    font-size: 70px;
-    letter-spacing: clamp(4px, 1.5vw, 12px);
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.curved-text {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.curved-text text {
-    font-family: 'ode', sans-serif;
-    fill: #ffebca;
-    font-size: 70px;
-    letter-spacing: 12px;
-    font-weight: 900;
-}
-
-.welcome h2{
-    font-family: "hwt-american-shopworn", sans-serif;
-    color: #ffebca;
-    font-size: 100px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 2px solid #ffebca;
-    border-radius: 50px;
-    color: #ffebca;
-    text-decoration: none;
-    font-family: "dico-code-two", monospace;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-weight: none;
-    text-transform: none;
-    letter-spacing: 2px;
-    transition: 0.3s ease-in-out;
-}
-
-
-.cta-button:hover {
-    background-color: #ffebca;
-    color: #000a8c;
-    box-shadow: 0 0 20px rgba(255, 228, 225, 0.4);
-}
-
-#camera-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-
-    width: 14000px;
-    max-width: none; 
-    height: auto;
-    
-    transform: translate(-50%, -50%) scale(0.1);
-    
-    opacity: 0;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-    z-index: 10001;
-    pointer-events: none;
-}
-
-#camera-img.zooming {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-
-
-#camera-img.visible {
-    opacity: 1;
-}
-
-#flash-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10000;
-}
-
-#flash-overlay.active {
-    opacity: 1;
-    transition: opacity 0.05s ease;
-}
-
-body #intro-container #camera-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 900px;
-    max-width: none;
-    transform: translate(-50%, -50%) scale(0.1);
-    opacity: 0;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-    z-index: 10001;
-    pointer-events: none;
-}
-
-body #intro-container #camera-img.zooming {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-body #flash-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    opacity: 0;
-    z-index: 10002;
-    pointer-events: none;
-    transition: opacity 0.1s ease;
-}
-
-body #flash-overlay.active {
-    opacity: 1;
-}
-
-#intro-container picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#camera-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200vw; 
-    max-width: none;
-    height: auto;
-    transform: translate(-50%, -50%) scale(0.1);
-    opacity: 0;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-    z-index: 10001;
-    pointer-events: none;
-}
-
-@keyframes cameraFlash {
-    0% { opacity: 0; }
-    50% { opacity: 1; } 
-    100% { opacity: 0; } 
-}
-
-@media (max-width: 480px) {
-    .curved-text {
-        max-width: 320px;
-    }
-}
-
-.curved-text textPath {
-    font-family: 'ode', sans-serif;
-    fill: #ffebca;
-    font-size: 55px;
-    font-weight: 900;
-}
-
-#camera-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 250vw;
-    max-width: none;
-    height: auto;
-    transform: translate(-50%, -50%) scale(0.1);
-    opacity: 0;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-    z-index: 10001;
-    pointer-events: none;
-}
-
-#camera-img.zooming {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-#flash-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 10002;
-}
-
-#flash-overlay.active {
-    opacity: 1;
-    transition: opacity 0.1s ease;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 40px;
-    border: 2px solid #ffebca;
-    border-radius: 50px;
-    color: #ffebca;
-    text-decoration: none;
-    font-family: "dico-code-two", monospace;
-    transition: 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #ffebca;
-    color: #000a8c;
-}
-
-@media (max-width: 768px) {
-    .desktop-camera {
-        display: none;
-    }
-
-    .mobile-camera {
-        display: block;
-    }
-
-    .curved-text {
-        max-width: 85%;
-        margin-bottom: 5px;
-    }
-
-    #camera-img {
-        content: url('../img/camera-mobile.png'); 
-        width: 350vw;
-    }
-
-    .welcome h1 {
-        margin-bottom: 5px;
-    }
-}
-
-@media (min-width: 769px) {
-    .desktop-camera {
-        display: block;
-    }
-
-    .mobile-camera {
-        display: none;
-    }
-}
-
-#camera-img {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* Use the same logic as your 'sizes' attribute */
-    width: 200vw; 
-    max-width: none;
-    transform: translate(-50%, -50%) scale(0.1);
-    opacity: 0;
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-}
-
-#camera-img.zooming {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* Zooms to its full 200vw size */
-}
-
-@media (max-width: 600px) {
-    #camera-img {
-        width: 300vw;
-    }
-}
-
-
+/* I couldn't figure out the welcome page page in the end. But will continue to pursue it later on. */
 /* Main Page */
 html {
   scroll-behavior: smooth;
@@ -477,6 +165,7 @@ body {
 }
 
 .aboutme h4 {
+    font-family: 'ode', sans-serif;
     text-align: center;
     font-size: clamp(32px, 8vw, 50px);
     margin-bottom: 10px;
@@ -527,6 +216,7 @@ body {
 }
 
 .skills h4{
+    font-family: 'ode', sans-serif;
     text-align: center;
     font-size: 50px;
     margin-top: -140px;
@@ -706,7 +396,7 @@ body {
 
 .footer-title {
     font-size: 22px;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 5px;
     line-height: 1.1;
 }
@@ -717,7 +407,7 @@ body {
     width: 100%;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 2px;
     line-height: 1.2;
 }
 
